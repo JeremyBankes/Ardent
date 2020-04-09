@@ -25,4 +25,5 @@ public class Ardent extends ApplicationAdapter {
 	public void dispose() {
 		core.dispose();
 	}
+
 }
