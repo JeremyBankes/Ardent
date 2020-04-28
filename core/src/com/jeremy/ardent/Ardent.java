@@ -18,12 +18,17 @@ public class Ardent extends ApplicationAdapter {
 		Gdx.gl.glClearColor(0.25f, 0.25f, 0.25f, 1.0f);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-		core.render(Gdx.graphics.getDeltaTime());
+		core.update(Gdx.graphics.getDeltaTime());
 	}
 
 	@Override
 	public void dispose() {
 		core.dispose();
+	}
+
+	@Override
+	public void resize(int width, int height) {
+		core.resize(width, height);
 	}
 
 }
