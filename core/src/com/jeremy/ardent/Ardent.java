@@ -28,7 +28,7 @@ public class Ardent extends ApplicationAdapter {
 
 	@Override
 	public void resize(int width, int height) {
-		core.resize(width, height);
+		core.onResize(width, height);
 	}
 
 }

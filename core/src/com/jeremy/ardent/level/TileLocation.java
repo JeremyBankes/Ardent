@@ -1,37 +1,37 @@
 package com.jeremy.ardent.level;
 
-public class Location {
+public class TileLocation {
 
 	public final Level level;
-	public final float x, y;
+	public final int x, y;
 
-	public Location(Level level, float x, float y) {
+	TileLocation(Level level, int x, int y) {
 		this.level = level;
 		this.x = x;
 		this.y = y;
 	}
 
-	public Location(float x, float y) {
+	TileLocation(int x, int y) {
 		this(null, x, y);
 	}
 
-	public Location(Level level, Location location) {
+	public TileLocation(Level level, TileLocation location) {
 		this(level, location.x, location.y);
 	}
 
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
-		if (!(o instanceof Location)) return false;
-		Location key = (Location) o;
+		if (!(o instanceof TileLocation)) return false;
+		TileLocation key = (TileLocation) o;
 		return x == key.x && y == key.y;
 	}
 
 	@Override
 	public int hashCode() {
-		float result = x;
+		int result = x;
 		result = 31 * result + y;
-		return Float.floatToIntBits(result);
+		return result;
 	}
 
 }
